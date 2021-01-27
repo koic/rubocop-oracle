@@ -2,7 +2,7 @@
 
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in rubocop-oracle_adapter.gemspec
+# Specify your gem's dependencies in rubocop-oracle.gemspec
 gemspec
 
 gem 'rake', '~> 13.0'

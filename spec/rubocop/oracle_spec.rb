@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-RSpec.describe Rubocop::OracleAdapter do
+RSpec.describe Rubocop::Oracle do
   it 'has a version number' do
-    expect(Rubocop::OracleAdapter::VERSION).not_to be nil
+    expect(Rubocop::Oracle::VERSION).not_to be nil
   end
 
   it 'does something useful' do

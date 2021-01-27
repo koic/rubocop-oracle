@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require 'rubocop/oracle_adapter'
+require 'rubocop/oracle'
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure

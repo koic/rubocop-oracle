@@ -1,16 +1,16 @@
 # frozen_string_literal: true
 
-require_relative 'lib/rubocop/oracle_adapter/version'
+require_relative 'lib/rubocop/oracle/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'rubocop-oracle_adapter'
-  spec.version       = Rubocop::OracleAdapter::VERSION
+  spec.name          = 'rubocop-oracle'
+  spec.version       = Rubocop::Oracle::VERSION
   spec.authors       = ['Koichi ITO']
   spec.email         = ['koic.ito@gmail.com']
 
   spec.summary       = 'A RuboCop extension for Active Record Oracle enhanced adapter.'
   spec.description   = 'A RuboCop extension for Active Record Oracle enhanced adapter.'
-  spec.homepage      = 'https://github.com/koic/rubocop-oracle_adapter'
+  spec.homepage      = 'https://github.com/koic/rubocop-oracle'
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.4.0')
 

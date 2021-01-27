@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
-require_relative 'oracle_adapter/version'
+require_relative 'oracle/version'
 
 module Rubocop
-  module OracleAdapter
+  module Oracle
     class Error < StandardError; end
     # Your code goes here...
   end
