@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require_relative "oracle_adapter/version"
+require_relative 'oracle_adapter/version'
 
 module Rubocop
   module OracleAdapter
