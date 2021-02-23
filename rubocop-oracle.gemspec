@@ -4,7 +4,7 @@ require_relative 'lib/rubocop/oracle/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'rubocop-oracle'
-  spec.version       = Rubocop::Oracle::VERSION
+  spec.version       = RuboCop::Oracle::VERSION
   spec.authors       = ['Koichi ITO']
   spec.email         = ['koic.ito@gmail.com']
 
