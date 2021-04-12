@@ -4,13 +4,25 @@ module RuboCop
   module Cop
     module Oracle
       #
-      # Checks for uses `options: online` option on `add_index`.
+      # This cop checks for uses `options: online` option on `add_index`.
+      # The `ONLINE` option is required if you want to run with OLTP when indexing migration in Oracle.
+      # By specifying `MigratedSchemaVersion` option, migration files that have been migrated can be ignored.
       #
-      # # bad
-      # add_index :table_name, :column_name
+      # @example
       #
-      # # good
-      # add_index :table_name, :column_name, options: :online
+      #   # bad
+      #   add_index :table_name, :column_name
+      #
+      #   # good
+      #   add_index :table_name, :column_name, options: :online
+      #
+      # @example MigratedSchemaVersion: '202104130150'
+      #
+      #   # bad - Migration files higher than '202104130150' will be registered an offense.
+      #   add_index :table_name, :column_name
+      #
+      #   # good - Migration files lower than or equal to '202104130150' will be ignored.
+      #   add_index :table_name, :column_name
       #
       class OnlineIndex < Base
         extend AutoCorrector
