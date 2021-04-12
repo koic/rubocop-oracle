@@ -1,7 +1,7 @@
 # RuboCop Oracle
 
-[![Gem Version](https://badge.fury.io/rb/rubocop-faker.svg)](https://badge.fury.io/rb/rubocop-oracle)
-[![CircleCI](https://circleci.com/gh/koic/rubocop-faker.svg?style=svg)](https://circleci.com/gh/koic/rubocop-oracle)
+[![Gem Version](https://badge.fury.io/rb/rubocop-oracle.svg)](https://badge.fury.io/rb/rubocop-oracle)
+[![CircleCI](https://circleci.com/gh/koic/rubocop-oracle.svg?style=svg)](https://circleci.com/gh/koic/rubocop-oracle)
 
 A [RuboCop](https://github.com/rubocop-hq/rubocop) extension for [Active Record Oracle enhanced adapter](https://github.com/rsim/oracle-enhanced).
 
@@ -21,7 +21,7 @@ gem 'rubocop-oracle'
 
 ## Usage
 
-You need to tell RuboCop to load the Rails extension. There are three
+You need to tell RuboCop to load the Oracle extension. There are three
 ways to do this:
 
 ### RuboCop configuration file
@@ -40,7 +40,7 @@ require:
   - rubocop-oracle
 ```
 
-Now you can run `rubocop` and it will automatically load the RuboCop Rails
+Now you can run `rubocop` and it will automatically load the RuboCop Oracle
 cops together with the standard cops.
 
 ### Command line
