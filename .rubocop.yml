@@ -74,7 +74,7 @@ Metrics/BlockLength:
 
 Naming/FileName:
   Exclude:
-    - lib/rubocop-faker.rb
+    - lib/rubocop-oracle.rb
 
 Metrics/ModuleLength:
   Exclude:
