@@ -39,9 +39,14 @@ RSpec.describe RuboCop::Cop::Oracle::OnlineIndex, :config do
   end
 
   context '`MigratedSchemaVersion` is not specified' do
-    it 'does not register an offense when not specifing `options: :online` on `add_index`' do
-      expect_no_offenses(<<~RUBY, 'db/migrate/202104130150_add_title_index_to_articles.rb')
+    it 'registers and corrects an offense when not specifing `options: :online` on `add_index`' do
+      expect_offense(<<~RUBY, 'db/migrate/202104130150_add_title_index_to_articles.rb')
         add_index :articles, :author
+        ^^^^^^^^^ Specify `options: :online` option to `add_index`.
+      RUBY
+
+      expect_correction(<<~RUBY)
+        add_index :articles, :author, options: :online
       RUBY
     end
 
