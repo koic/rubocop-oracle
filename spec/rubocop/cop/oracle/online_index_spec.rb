@@ -5,7 +5,7 @@ RSpec.describe RuboCop::Cop::Oracle::OnlineIndex, :config do
     let(:cop_config) { { 'MigratedSchemaVersion' => '202004130150' } }
 
     it 'registers and corrects an offense when not specifing `options: :online` on `add_index`' do
-      expect_offense(<<~RUBY, '202104130150_add_title_index_to_articles')
+      expect_offense(<<~RUBY, 'db/migrate/202104130150_add_title_index_to_articles.rb')
         add_index :articles, :author
         ^^^^^^^^^ Specify `options: :online` option to `add_index`.
       RUBY
@@ -16,7 +16,7 @@ RSpec.describe RuboCop::Cop::Oracle::OnlineIndex, :config do
     end
 
     it 'does not register an offense when specifing `options: :online` on `add_index`' do
-      expect_no_offenses(<<~RUBY, '202104130150_add_title_index_to_articles')
+      expect_no_offenses(<<~RUBY, 'db/migrate/202104130150_add_title_index_to_articles.rb')
         add_index :articles, :author, options: :online
       RUBY
     end
@@ -26,13 +26,13 @@ RSpec.describe RuboCop::Cop::Oracle::OnlineIndex, :config do
     let(:cop_config) { { 'MigratedSchemaVersion' => '202104130150' } }
 
     it 'does not register an offense when not specifing `options: :online` on `add_index`' do
-      expect_no_offenses(<<~RUBY, '202104130150_add_title_index_to_articles')
+      expect_no_offenses(<<~RUBY, 'db/migrate/202104130150_add_title_index_to_articles.rb')
         add_index :articles, :author
       RUBY
     end
 
     it 'does not register an offense when specifing `options: :online` on `add_index`' do
-      expect_no_offenses(<<~RUBY, '202104130150_add_title_index_to_articles')
+      expect_no_offenses(<<~RUBY, 'db/migrate/202104130150_add_title_index_to_articles.rb')
         add_index :articles, :author, options: :online
       RUBY
     end
@@ -40,13 +40,13 @@ RSpec.describe RuboCop::Cop::Oracle::OnlineIndex, :config do
 
   context '`MigratedSchemaVersion` is not specified' do
     it 'does not register an offense when not specifing `options: :online` on `add_index`' do
-      expect_no_offenses(<<~RUBY, '202104130150_add_title_index_to_articles')
+      expect_no_offenses(<<~RUBY, 'db/migrate/202104130150_add_title_index_to_articles.rb')
         add_index :articles, :author
       RUBY
     end
 
     it 'does not register an offense when specifing `options: :online` on `add_index`' do
-      expect_no_offenses(<<~RUBY, '202104130150_add_title_index_to_articles')
+      expect_no_offenses(<<~RUBY, 'db/migrate/202104130150_add_title_index_to_articles.rb')
         add_index :articles, :author, options: :online
       RUBY
     end

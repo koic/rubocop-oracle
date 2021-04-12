@@ -22,3 +22,5 @@ Oracle/OnlineIndex:
   Enabled: true
   VersionAdded: '0.1'
   SchemaVersion: ~
+  Include:
+    - 'db/migrate/**/*.rb'
