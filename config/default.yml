@@ -21,6 +21,6 @@ Oracle/OnlineIndex:
   Description: 'Checks for uses `options: online` option on `add_index`.'
   Enabled: true
   VersionAdded: '0.1'
-  SchemaVersion: ~
+  MigratedSchemaVersion: ~
   Include:
     - 'db/migrate/**/*.rb'
