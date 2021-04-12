@@ -9,6 +9,10 @@ RSpec.describe RuboCop::Cop::Oracle::OnlineIndex, :config do
         add_index :articles, :author
         ^^^^^^^^^ Specify `options: :online` option to `add_index`.
       RUBY
+
+      expect_correction(<<~RUBY)
+        add_index :articles, :author, options: :online
+      RUBY
     end
 
     it 'does not register an offense when specifing `options: :online` on `add_index`' do
