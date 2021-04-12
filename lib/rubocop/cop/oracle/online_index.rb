@@ -42,6 +42,7 @@ module RuboCop
 
         def already_migrated_file?
           schema_version = processed_source.file_path.match(/(?<timestamp>\d{12})/)['timestamp']
+          return true unless migrated_schema_version
 
           schema_version <= migrated_schema_version # Ignore applied migration files.
         end
