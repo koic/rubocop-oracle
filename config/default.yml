@@ -20,7 +20,9 @@ AllCops:
 Oracle/OnlineIndex:
   Description: 'Checks for uses `options: online` option on `add_index`.'
   Enabled: true
+  SafeAutoCorrect: false
   VersionAdded: '0.1'
+  VersionChanged: '0.2'
   MigratedSchemaVersion: ~
   Include:
     - 'db/migrate/**/*.rb'
