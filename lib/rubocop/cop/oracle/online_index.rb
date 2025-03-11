@@ -3,8 +3,7 @@
 module RuboCop
   module Cop
     module Oracle
-      #
-      # This cop checks for uses `options: online` option on `add_index`.
+      # Checks for uses `options: online` option on `add_index`.
       # The `ONLINE` option is required if you want to run with OLTP when indexing migration in Oracle.
       # By specifying `MigratedSchemaVersion` option, migration files that have been migrated can be ignored.
       #

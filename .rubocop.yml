@@ -1,13 +1,17 @@
 # This is the configuration used to check the rubocop source code.
 
-require:
-  - rubocop/cop/internal_affairs
+plugins:
+  - rubocop-internal_affairs
+  - rubocop-oracle
   - rubocop-performance
 
 AllCops:
   NewCops: enable
-  TargetRubyVersion: 2.5
+  TargetRubyVersion: 2.7
   SuggestExtensions: false
+
+InternalAffairs/OnSendWithoutOnCSend:
+  Enabled: false
 
 Naming/PredicateName:
   # Method define macros for dynamically generated method.
