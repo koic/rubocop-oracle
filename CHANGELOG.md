@@ -4,6 +4,8 @@
 
 ### New features
 
+## 1.0.0 (2025-04-05)
+
 * Pluginfy RuboCop Oracle. ([@koic][])
 
 ## 0.2.0 (2021-04-14)
