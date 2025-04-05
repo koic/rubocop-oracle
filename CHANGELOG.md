@@ -2,9 +2,9 @@
 
 ## master (unreleased)
 
-### New features
-
 ## 1.0.0 (2025-04-05)
+
+### New features
 
 * Pluginfy RuboCop Oracle. ([@koic][])
 
